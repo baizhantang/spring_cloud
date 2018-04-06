@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: eureka-monitor-client
+server:
+  port: 8840
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/
+
+turbine:
+  app-config: eureka-ribbon-client, eureka-feign-client
+  cluster-name-expression: new String("default")
