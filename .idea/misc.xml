@@ -5,14 +5,15 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/config_client/pom.xml" />
+        <option value="$PROJECT_DIR$/config_server/pom.xml" />
         <option value="$PROJECT_DIR$/eureka_common_client/pom.xml" />
         <option value="$PROJECT_DIR$/eureka_feign_client/pom.xml" />
         <option value="$PROJECT_DIR$/eureka_monitor_client/pom.xml" />
         <option value="$PROJECT_DIR$/eureka_ribbon_client/pom.xml" />
         <option value="$PROJECT_DIR$/eureka_server/pom.xml" />
         <option value="$PROJECT_DIR$/eureka_zuul_client/pom.xml" />
-        <option value="$PROJECT_DIR$/config_server/pom.xml" />
-        <option value="$PROJECT_DIR$/config_client/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka_zipkin_client/pom.xml" />
       </list>
     </option>
   </component>

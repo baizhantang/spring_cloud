@@ -1,0 +1,17 @@
+server:
+  port: 8870
+spring:
+  application:
+    name: eureka-zipkin-client
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring-cloud-zipkin?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: Sh_951753.
+    driver-class-name: com.mysql.jdbc.Driver
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+zipkin:
+  storage:
+    type: mysql

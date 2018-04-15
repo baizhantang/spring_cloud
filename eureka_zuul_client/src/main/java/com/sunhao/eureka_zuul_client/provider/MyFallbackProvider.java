@@ -28,7 +28,7 @@ public class MyFallbackProvider implements ZuulFallbackProvider {
 
             @Override
             public int getRawStatusCode() throws IOException {
-                return 10086;
+                return 401;
             }
 
             @Override

@@ -13,6 +13,7 @@
         <module name="eureka_monitor_client" />
         <module name="eureka_ribbon_client" />
         <module name="eureka_server" />
+        <module name="eureka_zipkin_client" />
         <module name="eureka_zuul_client" />
       </profile>
     </annotationProcessing>

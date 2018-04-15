@@ -24,39 +24,41 @@ public class TokenFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        RequestContext context = RequestContext.getCurrentContext();
-        HttpServletRequest request = context.getRequest();
-        String name = request.getParameter("name");
-        if (name == null || name.isEmpty()) {
-            return true;
-        } else if ("sunhao".equals(name)){
-            return true;
-        } else {
-            //在这里返回false之后不执行run方法，如果zuul有熔断器的话直接执行快速失败
-            return false;
-        }
+//        RequestContext context = RequestContext.getCurrentContext();
+//        HttpServletRequest request = context.getRequest();
+//        String name = request.getParameter("name");
+//        if (name == null || name.isEmpty()) {
+//            return true;
+//        } else if ("sunhao".equals(name)){
+//            return true;
+//        } else {
+//            //在这里返回false之后不执行run方法，如果zuul有熔断器的话直接执行快速失败
+//            return false;
+//        }
+
+        return true;
     }
 
     @Override
     public Object run() {
-        RequestContext context = RequestContext.getCurrentContext();
-        HttpServletRequest request = context.getRequest();
-        try {
-            request.setCharacterEncoding("utf-8");
-        } catch (UnsupportedEncodingException e) {
-            return null;
-        }
-        String token = request.getParameter("token");
-        if (token == null || token.isEmpty()) {
-            context.setSendZuulResponse(false);
-            context.setResponseStatusCode(10086);
-
-            try {
-                context.getResponse().getWriter().write("token 不能为空！");
-            } catch (IOException e) {
-                return null;
-            }
-        }
+//        RequestContext context = RequestContext.getCurrentContext();
+//        HttpServletRequest request = context.getRequest();
+//        try {
+//            request.setCharacterEncoding("utf-8");
+//        } catch (UnsupportedEncodingException e) {
+//            return null;
+//        }
+//        String token = request.getParameter("token");
+//        if (token == null || token.isEmpty()) {
+//            context.setSendZuulResponse(false);
+//            context.setResponseStatusCode(401);
+//
+//            try {
+//                context.getResponse().getWriter().write("token 不能为空！");
+//            } catch (IOException e) {
+//                return null;
+//            }
+//        }
         return null;
     }
 }

@@ -7,3 +7,8 @@ eureka:
 spring:
   application:
     name: eureka-common-client
+  zipkin:
+    base-url: http://localhost:8870
+  sleuth:
+    sampler:
+      percentage: 1.0
